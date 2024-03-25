@@ -1,0 +1,184 @@
+@tailwind base;
+@layer base {
+  html,
+  body {
+    @apply bg-bp-grey-3 font-manrope text-base font-normal text-bp-body antialiased;
+  }
+
+  h1 {
+    @apply font-fraunces text-4xl font-semibold text-bp-heading md:text-5xl lg:text-7xl;
+  }
+
+  h2 {
+    @apply m-0 text-3xl font-semibold text-bp-heading md:text-5xl;
+  }
+
+  h1,
+  h2,
+  h3 {
+    letter-spacing: -1px;
+  }
+
+  .accordion {
+    &-details[open] {
+      .summary-open {
+        @apply bp-hidden;
+      }
+      .summary-close {
+        @apply block;
+      }
+    }
+  }
+
+  .product {
+    h1 {
+      @apply font-manrope text-2xl font-semibold text-bp-heading md:text-3xl;
+    }
+
+    .product__media {
+      @apply rounded-xl;
+    }
+
+    &__info-wrapper {
+      .product__info-container > * + * {
+        @apply my-1;
+      }
+    }
+
+    &__media-item {
+      @apply rounded-2xl transition-shadow duration-300 ease-in-out hover:shadow-lg;
+    }
+
+    &__title {
+      @apply m-0;
+    }
+
+    .rc-container-wrapper {
+      .rc_widget {
+        &__option {
+          &__plans {
+            &__dropdown {
+              @apply mt-3 rounded-lg border px-3 py-1 text-sm;
+            }
+          }
+          &__selector {
+            @apply flex items-center;
+          }
+        }
+      }
+      .rc-widget {
+        .rc-radio {
+          &__label {
+            @apply text-base;
+          }
+
+          &__input {
+            appearance: none;
+            font: inherit;
+            color: currentColor;
+            width: 1em;
+            height: 1em;
+            border: 0.1em solid #eeece7;
+            @apply m-0 grid place-content-center rounded-full bg-white;
+
+            &:checked {
+              border: 0.1em solid currentColor;
+
+              &::before {
+                @apply scale-100;
+              }
+            }
+
+            &::before {
+              @apply rounded-full;
+              content: '';
+              width: 0.5em;
+              height: 0.5em;
+              transform: scale(0);
+              box-shadow: inset 1em 1em #000000;
+            }
+          }
+        }
+        .rc-option--active {
+          @apply bg-transparent;
+          .rc-radio__label {
+            @apply font-semibold;
+          }
+        }
+      }
+      .rc_popup {
+        &_label {
+          @apply text-base;
+          &_wrapper {
+            @apply flex items-center text-base;
+          }
+        }
+      }
+    }
+
+    .product-form {
+      &__input {
+        .quantity {
+          @apply rounded-lg border-2 border-solid border-bp-heading bg-bp-grey-2 text-base font-semibold before:bg-none before:shadow-none after:bg-transparent after:shadow-none;
+          &__button,
+          &__input {
+            @apply text-base;
+          }
+        }
+      }
+      &__buttons {
+        .shopify-cleanslate {
+          > div {
+            @apply rounded-xl;
+          }
+        }
+      }
+      .button {
+        &.product-form__submit {
+          @apply rounded-xl border-2 border-solid border-bp-heading bg-white text-base font-semibold before:shadow-none after:shadow-none;
+        }
+        @apply bg-white;
+      }
+    }
+
+    &__accordion {
+      .summary__title {
+        @apply items-center;
+      }
+      .accordion__title {
+        @apply text-lg;
+      }
+    }
+  }
+
+  .section-header {
+    .header-wrapper {
+      @apply bp-hidden !important;
+    }
+  }
+
+  .shopify-section {
+    .page-width {
+      @apply container;
+    }
+  }
+}
+@tailwind components;
+@layer components {
+  .btn {
+    @apply inline-block whitespace-nowrap rounded-lg border-2 px-6 py-3 text-lg font-bold text-bp-heading transition-colors duration-200 ease-in-out;
+
+    &-sm {
+      @apply px-3 py-1;
+    }
+  }
+
+  .bp-hidden {
+    @apply hidden;
+  }
+}
+@tailwind utilities;
+
+.oke-reviewsTab[role='button'] {
+  @apply bp-hidden md:flex !important;
+}

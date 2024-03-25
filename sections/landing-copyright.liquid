@@ -1,0 +1,102 @@
+<div class="bottom-foot">
+  <div class="bottom_foot_wrap page-width">
+    <div class="logo_img">
+      <img src="{{ section.settings.logo | img_url: 'master' }}" height="auto" width="auto" loading="lazy">
+    </div>
+    <div class="copyright_text">{{ section.settings.copyright }}</div>
+    <div class="linklist">
+      <a class="bottom_foot_link" href="{{ section.settings.first_link }}">{{ section.settings.first_text }}</a>
+      <a class="bottom_foot_link" href="{{ section.settings.second_link }}">{{ section.settings.second_text }}</a>
+      <a class="bottom_foot_link" href="{{ section.settings.third_link }}">{{ section.settings.third_text }}</a>
+    </div>
+  </div>
+</div>
+
+
+<style>
+  #shopify-section-{{ section.id }} .bottom-foot img{
+    width: 120px;
+  }
+  #shopify-section-{{ section.id }} .bottom-foot{
+    background-color: #000;
+    padding: 30px 0 10px;
+  }
+  #shopify-section-{{ section.id }} .bottom_foot_wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+ #shopify-section-{{ section.id }} .bottom_foot_link,
+  #shopify-section-{{ section.id }} .copyright_text{
+    color: #fff;
+    font-family: 'Assistant';
+    font-size: 16px;
+    line-height: 1.2;
+  }
+  @media (max-width: 1024px){
+    #shopify-section-{{ section.id }} .bottom_foot_wrap{
+          flex-direction: column;
+    row-gap: 10px;
+    }
+    #shopify-section-{{ section.id }} .copyright_text{
+          text-align: center;
+    }
+  }
+</style>
+
+
+{% schema %}
+{
+  "name": "Landing Copyright",
+  "settings": [
+      {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Add logo"
+    },
+    {
+      "type": "text",
+      "id": "copyright",
+      "label": "Add copyright text"
+    },
+    {
+          "type": "text",
+          "id": "first_text",
+          "default": "Button label",
+          "label": "Button label"
+        },
+        {
+          "type": "url",
+          "id": "first_link",
+          "label": "First button link"
+        },
+        {
+          "type": "text",
+          "id": "second_text",
+          "default": "Button label",
+          "label": "Button label"
+        },
+        {
+          "type": "url",
+          "id": "second_link",
+          "label": "Second button link"
+        },
+        {
+          "type": "text",
+          "id": "third_text",
+          "default": "Button label",
+          "label": "Button label"
+        },
+        {
+          "type": "url",
+          "id": "third_link",
+          "label": "Thirs button link"
+        }
+      ],
+  "presets": [
+    {
+      "name": "Landing Copyright"
+    }
+  ]
+}
+{% endschema %}
