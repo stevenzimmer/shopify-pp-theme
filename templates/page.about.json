@@ -1,1 +1,145 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"settings":{"padding_top":36,"padding_bottom":28}},"3f08ce34-9c56-4e63-a840-26df46ef3c09":{"type":"image-with-text","blocks":{"template--17850613661995__3f08ce34-9c56-4e63-a840-26df46ef3c09-16752226561e7e0a4a-0":{"type":"heading","settings":{"heading":"Our Mission","heading_size":"h1"}},"template--17850613661995__3f08ce34-9c56-4e63-a840-26df46ef3c09-16752226561e7e0a4a-1":{"type":"text","settings":{"text":"<p><strong>Mission: <\/strong>Plus Patches was started because we saw a need for a better overlay (cover tape) tape to help secure CGMs and Infusion Pumps. Our founders have worked in the stick-to-skin wearables market since its inception. We wanted to create a highly engineered tape product that would help diabetics secure their device and forget about. We work with the best adhesive tape vendors and we knew we could develop a product that was better than anything else on the market today. Through trials and a lot of engineering we created the Plus Patches to secure your device for the intended length of the device.<\/p>","text_style":"body"}},"template--17850613661995__3f08ce34-9c56-4e63-a840-26df46ef3c09-16752226561e7e0a4a-2":{"type":"button","disabled":true,"settings":{"button_label":"","button_link":""}}},"block_order":["template--17850613661995__3f08ce34-9c56-4e63-a840-26df46ef3c09-16752226561e7e0a4a-0","template--17850613661995__3f08ce34-9c56-4e63-a840-26df46ef3c09-16752226561e7e0a4a-1","template--17850613661995__3f08ce34-9c56-4e63-a840-26df46ef3c09-16752226561e7e0a4a-2"],"settings":{"image":"shopify:\/\/shop_images\/Copy_of_LD_03686-Edit.jpg","height":"small","desktop_image_width":"small","layout":"image_first","desktop_content_position":"top","desktop_content_alignment":"left","content_layout":"no-overlap","color_scheme":"background-1","mobile_content_alignment":"left","padding_top":36,"padding_bottom":36}},"67462408-dab6-4815-9fa3-bd2135ef516f":{"type":"image-with-text","blocks":{"template--17850613661995__67462408-dab6-4815-9fa3-bd2135ef516f-16752226561e7e0a4a-0":{"type":"heading","settings":{"heading":"About Us","heading_size":"h1"}},"template--17850613661995__67462408-dab6-4815-9fa3-bd2135ef516f-16752226561e7e0a4a-1":{"type":"text","settings":{"text":"<p>Skin Patch Shop (parent company) was created when our founders saw a market need in the CGM space to secure CGM devices as the market segment grows. Our founder has over 20 years of adhesive tape engineering experience. He helped Dexcom launch their G4-G6 versions of their CGM as well as over 50 wearables companies launch their products. He knows tape! Through many years in the adhesive and tape converting industry our founder saw a need for something better to help secure CGM and Infusion pumps stay in place for 2+ weeks. We knew we could build a better product that would allow Type 1 diabetics secure their device and then go on with life. We wanted to give diabetics a higher end solution that works better than KT Tape and something that is ultra reliable. Thus, the Plus Patch adhesive system of cover tapes was born.<\/p>","text_style":"body"}},"template--17850613661995__67462408-dab6-4815-9fa3-bd2135ef516f-16752226561e7e0a4a-2":{"type":"button","disabled":true,"settings":{"button_label":"Button label","button_link":""}}},"block_order":["template--17850613661995__67462408-dab6-4815-9fa3-bd2135ef516f-16752226561e7e0a4a-0","template--17850613661995__67462408-dab6-4815-9fa3-bd2135ef516f-16752226561e7e0a4a-1","template--17850613661995__67462408-dab6-4815-9fa3-bd2135ef516f-16752226561e7e0a4a-2"],"settings":{"image":"shopify:\/\/shop_images\/LD_07242_lower_res.jpg","height":"small","desktop_image_width":"small","layout":"text_first","desktop_content_position":"top","desktop_content_alignment":"left","content_layout":"no-overlap","color_scheme":"background-1","mobile_content_alignment":"left","padding_top":36,"padding_bottom":36}},"newsletter":{"type":"newsletter","blocks":{"heading":{"type":"heading","settings":{"heading":"Subscribe to our emails","heading_size":"h1"}},"paragraph":{"type":"paragraph","settings":{"text":"<p>Be the first to know about new collections and exclusive offers.<\/p>"}},"email-form":{"type":"email_form","settings":{}}},"block_order":["heading","paragraph","email-form"],"settings":{"color_scheme":"accent-2","full_width":true,"padding_top":60,"padding_bottom":0}}},"order":["main","3f08ce34-9c56-4e63-a840-26df46ef3c09","67462408-dab6-4815-9fa3-bd2135ef516f","newsletter"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": { "padding_top": 36, "padding_bottom": 28 }
+    },
+    "3f08ce34-9c56-4e63-a840-26df46ef3c09": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--17850613661995__3f08ce34-9c56-4e63-a840-26df46ef3c09-16752226561e7e0a4a-0": {
+          "type": "heading",
+          "settings": { "heading": "Our Mission", "heading_size": "h2" }
+        },
+        "template--17850613661995__3f08ce34-9c56-4e63-a840-26df46ef3c09-16752226561e7e0a4a-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Plus Patches was started because we saw a need for a better overlay (cover tape) tape to help secure CGMs and Infusion Pumps. Our founders have worked in the stick-to-skin wearables market since its inception. We wanted to create a highly engineered tape product that would help diabetics secure their device and forget about.</p> <p>We work with the best adhesive tape vendors and we knew we could develop a product that was better than anything else on the market today. Through trials and a lot of engineering we created the Plus Patches to secure your device for the intended length of the device.</p>",
+            "text_style": "body"
+          }
+        },
+        "template--17850613661995__3f08ce34-9c56-4e63-a840-26df46ef3c09-16752226561e7e0a4a-2": {
+          "type": "button",
+          "disabled": true,
+          "settings": { "button_label": "", "button_link": "" }
+        }
+      },
+      "block_order": [
+        "template--17850613661995__3f08ce34-9c56-4e63-a840-26df46ef3c09-16752226561e7e0a4a-0",
+        "template--17850613661995__3f08ce34-9c56-4e63-a840-26df46ef3c09-16752226561e7e0a4a-1",
+        "template--17850613661995__3f08ce34-9c56-4e63-a840-26df46ef3c09-16752226561e7e0a4a-2"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/our-mission.png",
+        "height": "small",
+        "desktop_image_width": "half",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "67462408-dab6-4815-9fa3-bd2135ef516f": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--17850613661995__67462408-dab6-4815-9fa3-bd2135ef516f-16752226561e7e0a4a-0": {
+          "type": "heading",
+          "settings": { "heading": "About Plus Patches", "heading_size": "h2" }
+        },
+        "template--17850613661995__67462408-dab6-4815-9fa3-bd2135ef516f-16752226561e7e0a4a-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Skin Patch Shop (parent company) was created when our founders saw a market need in the CGM space to secure CGM devices as the market segment grows. Our founder has over 20 years of adhesive tape engineering experience. He helped Dexcom launch their G4-G6 versions of their CGM as well as over 50 wearables companies launch their products. He knows tape!</p> <p>Through many years in the adhesive and tape converting industry our founder saw a need for something better to help secure CGM and Infusion pumps stay in place for 2+ weeks. We knew we could build a better product that would allow Type 1 diabetics secure their device and then go on with life.</p> <p>We wanted to give diabetics a higher end solution that works better than KT Tape and something that is ultra reliable. Thus, the Plus Patch adhesive system of cover tapes was born.</p>",
+            "text_style": "body"
+          }
+        },
+        "template--17850613661995__67462408-dab6-4815-9fa3-bd2135ef516f-16752226561e7e0a4a-2": {
+          "type": "button",
+          "disabled": true,
+          "settings": { "button_label": "Button label", "button_link": "" }
+        }
+      },
+      "block_order": [
+        "template--17850613661995__67462408-dab6-4815-9fa3-bd2135ef516f-16752226561e7e0a4a-0",
+        "template--17850613661995__67462408-dab6-4815-9fa3-bd2135ef516f-16752226561e7e0a4a-1",
+        "template--17850613661995__67462408-dab6-4815-9fa3-bd2135ef516f-16752226561e7e0a4a-2"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/about-plus-patches.png",
+        "height": "small",
+        "desktop_image_width": "half",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured-collection": {
+      "type": "featured-collection",
+      "settings": {
+        "thumbnail": true,
+        "title": "Shop Premium Quality Patches",
+        "heading_size": "h1",
+        "description": "<p>For Dexcom, Freestyle Libre, Medatronic Guardian, and Omnipod Monitors</p>",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all",
+        "products_to_show": 5,
+        "columns_desktop": 5,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "link",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": { "heading": "Subscribe to Plus Patches", "heading_size": "h2" }
+        },
+        "paragraph": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Be the first to know about new collections and exclusive offers.</p>"
+          }
+        },
+        "email-form": { "type": "email_form", "settings": {} }
+      },
+      "block_order": ["heading", "paragraph", "email-form"],
+      "settings": {
+        "color_scheme": "accent-2",
+        "full_width": true,
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "3f08ce34-9c56-4e63-a840-26df46ef3c09",
+    "67462408-dab6-4815-9fa3-bd2135ef516f",
+    "featured-collection",
+    "newsletter"
+  ]
+}

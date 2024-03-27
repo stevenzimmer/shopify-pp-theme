@@ -15,16 +15,16 @@
   }
 {%- endstyle -%}
 
-<div class="newsletter center {% if section.settings.full_width == false %}newsletter--narrow page-width{% endif %}">
-  <div class="newsletter__wrapper color-{{ section.settings.color_scheme }} gradient content-container isolate{% if section.settings.full_width %} content-container--full-width{% endif %} section-{{ section.id }}-padding">
+<div class="newsletter center bg-pp-indigo {% if section.settings.full_width == false %}newsletter--narrow page-width{% endif %}">
+  <div class="newsletter__wrapper color-{{ section.settings.color_scheme }}  content-container isolate{% if section.settings.full_width %} content-container--full-width{% endif %} section-{{ section.id }}-padding">
     {%- for block in section.blocks -%}
       {%- case block.type -%}
         {%- when '@app' -%}
           {% render block %}
         {%- when 'heading' -%}
-          <h2 class="{{ block.settings.heading_size }}" {{ block.shopify_attributes }}>{{ block.settings.heading | escape }}</h2>
+          <h2 class="{{ block.settings.heading_size }} text-white" {{ block.shopify_attributes }}>{{ block.settings.heading | escape }}</h2>
         {%- when 'paragraph' -%}
-          <div class="newsletter__subheading rte" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
+          <div class="newsletter__subheading rte text-white" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
         {%- when 'email_form' -%}
           <div {{ block.shopify_attributes }}>
             {% form 'customer', class: 'newsletter-form' %}
@@ -35,7 +35,7 @@
                     id="NewsletterForm--{{ section.id }}"
                     type="email"
                     name="contact[email]"
-                    class="field__input"
+                    class="field__input bg-pp-indigo text-white"
                     value="{{ form.email }}"
                     aria-required="true"
                     autocorrect="off"
@@ -150,7 +150,7 @@
         {
           "type": "text",
           "id": "heading",
-          "default": "Subscribe to our emails",
+          "default": "Subscribe to Plus Patches",
           "label": "t:sections.newsletter.blocks.heading.settings.heading.label"
         },
         {
@@ -170,7 +170,7 @@
               "label": "t:sections.all.heading_size.options__3.label"
             }
           ],
-          "default": "h1",
+          "default": "h3",
           "label": "t:sections.all.heading_size.label"
         }
       ]

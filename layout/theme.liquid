@@ -2,22 +2,22 @@
 <html class="no-js" lang="{{ request.locale.iso_code }}">
   <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11064857100"></script>
+{% comment %} <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11064857100"></script> {% endcomment %}
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  // window.dataLayer = window.dataLayer || [];
+  // function gtag(){dataLayer.push(arguments);}
+  // gtag('js', new Date());
 
-  gtag('config', 'AW-11064857100');
+  // gtag('config', 'AW-11064857100');
 </script>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7B9ZSYZ24B"></script>
+{% comment %} <script async src="https://www.googletagmanager.com/gtag/js?id=G-7B9ZSYZ24B"></script> {% endcomment %}
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  // window.dataLayer = window.dataLayer || [];
+  // function gtag(){dataLayer.push(arguments);}
+  // gtag('js', new Date());
 
-  gtag('config', 'G-7B9ZSYZ24B');
+  // gtag('config', 'G-7B9ZSYZ24B');
 </script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -48,6 +48,10 @@
     {% render 'meta-tags' %}
 
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
+
+
+
+
     {{ content_for_header }}
 
     {%- liquid
@@ -201,40 +205,22 @@
         --variant-pills-shadow-blur-radius: {{ settings.variant_pills_shadow_blur }}px;
       }
 
-      *,
-      *::before,
-      *::after {
-        box-sizing: inherit;
-      }
+      
 
-      html {
-        box-sizing: border-box;
-        font-size: calc(var(--font-body-scale) * 62.5%);
-        height: 100%;
-      }
+    
 
-      body {
-        display: grid;
-        grid-template-rows: auto auto 1fr auto;
-        grid-template-columns: 100%;
-        min-height: 100%;
-        margin: 0;
-        font-size: 1.5rem;
-        letter-spacing: 0.06rem;
-        line-height: calc(1 + 0.8 / var(--font-body-scale));
-        font-family: var(--font-body-family);
-        font-style: var(--font-body-style);
-        font-weight: var(--font-body-weight);
-      }
-
-      @media screen and (min-width: 750px) {
-        body {
-          font-size: 1.6rem;
-        }
-      }
     {% endstyle %}
 
+{%- liquid
+render 'vite-tag' with 'theme.css'
+render 'vite-tag' with 'theme.js'
+-%}
+
     {{ 'base.css' | asset_url | stylesheet_tag }}
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
 
     {%- unless settings.type_body_font.system? -%}
       <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
@@ -254,27 +240,27 @@
     </script>
 
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-N9VWFWWPD3"></script>
+{% comment %} <script async src="https://www.googletagmanager.com/gtag/js?id=G-N9VWFWWPD3"></script> {% endcomment %}
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  // window.dataLayer = window.dataLayer || [];
+  // function gtag(){dataLayer.push(arguments);}
+  // gtag('js', new Date());
 
-  gtag('config', 'G-N9VWFWWPD3');
+  // gtag('config', 'G-N9VWFWWPD3');
 </script>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-262456227-1">
-</script>
+{% comment %} <script async src="https://www.googletagmanager.com/gtag/js?id=UA-262456227-1">
+</script> {% endcomment %}
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  // window.dataLayer = window.dataLayer || [];
+  // function gtag(){dataLayer.push(arguments);}
+  // gtag('js', new Date());
 
-  gtag('config', 'UA-262456227-1');
+  // gtag('config', 'UA-262456227-1');
 </script>
   </head>
 
-  <body class="gradient">
+  <body class="">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ "accessibility.skip_to_text" | t }}
     </a>

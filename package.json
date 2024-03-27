@@ -1,5 +1,5 @@
 {
-  "name": "bp-theme",
+  "name": "pp-theme",
   "version": "1.0.0-alpha.1",
   "private": true,
   "type": "module",
@@ -12,7 +12,7 @@
   ],
   "scripts": {
     "dev": "concurrently --raw --kill-others --passthrough-arguments \"npm run shopify:dev {@}\" \"npm run vite:dev\"",
-    "shopify:dev": "shopify theme dev",
+    "shopify:dev": "shopify theme dev --store plus-patches",
     "vite:dev": "vite",
     "deploy": "npm run build && npm run shopify:push",
     "shopify:push": "shopify theme push",

@@ -1,16 +1,29 @@
 @tailwind base;
 @layer base {
-  html,
+
+    *,
+      *::before,
+      *::after {
+        box-sizing: inherit;
+      }
+
+      html {
+        box-sizing: border-box;
+        height: 100%;
+      }
+  
   body {
-    @apply bg-bp-grey-3 font-manrope text-base font-normal text-bp-body antialiased;
+    @apply grid min-h-full bg-pp-grey-1 font-syne text-base font-normal text-pp-body antialiased;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-columns: 100%;
   }
 
   h1 {
-    @apply font-fraunces text-4xl font-semibold text-bp-heading md:text-5xl lg:text-7xl;
+    @apply text-4xl font-semibold text-pp-heading md:text-5xl lg:text-7xl;
   }
 
   h2 {
-    @apply m-0 text-3xl font-semibold text-bp-heading md:text-5xl;
+    @apply m-0 text-3xl font-semibold text-pp-heading md:text-5xl;
   }
 
   h1,
@@ -22,17 +35,33 @@
   .accordion {
     &-details[open] {
       .summary-open {
-        @apply bp-hidden;
+        @apply pp-hidden;
       }
       .summary-close {
         @apply block;
       }
     }
   }
+  .header-caret {
+    .icon.icon-caret {
+      @apply transition-transform duration-300 ease-in-out;
+      path {
+        stroke: #ffffff;
+      }
+    }
+  }
+
+  details[open] {
+    .header-caret {
+      .icon-caret {
+        @apply rotate-180;
+      }
+    }
+  }
 
   .product {
     h1 {
-      @apply font-manrope text-2xl font-semibold text-bp-heading md:text-3xl;
+      @apply text-4xl md:text-5xl font-semibold text-pp-heading;
     }
 
     .product__media {
@@ -119,10 +148,20 @@
     .product-form {
       &__input {
         .quantity {
-          @apply rounded-lg border-2 border-solid border-bp-heading bg-bp-grey-2 text-base font-semibold before:bg-none before:shadow-none after:bg-transparent after:shadow-none;
+          @apply rounded-lg border-2 border-solid border-pp-heading bg-pp-grey-1 text-base font-semibold before:bg-none before:shadow-none after:bg-transparent after:shadow-none overflow-hidden;
           &__button,
           &__input {
             @apply text-base;
+          }
+        }
+
+        [type='radio'] {
+          + label {
+            @apply bg-white rounded-lg text-pp-heading px-4 py-2 text-base border-2 border-solid border-pp-grey-3;
+            min-width: 100px;            
+          }
+          &:checked + label {
+            @apply bg-black text-white border-black;
           }
         }
       }
@@ -133,9 +172,10 @@
           }
         }
       }
+      
       .button {
         &.product-form__submit {
-          @apply rounded-xl border-2 border-solid border-bp-heading bg-white text-base font-semibold before:shadow-none after:shadow-none;
+          @apply rounded-xl border-2 border-solid border-pp-heading bg-white text-base font-semibold before:shadow-none after:shadow-none;
         }
         @apply bg-white;
       }
@@ -151,12 +191,6 @@
     }
   }
 
-  .section-header {
-    .header-wrapper {
-      @apply bp-hidden !important;
-    }
-  }
-
   .shopify-section {
     .page-width {
       @apply container;
@@ -166,19 +200,19 @@
 @tailwind components;
 @layer components {
   .btn {
-    @apply inline-block whitespace-nowrap rounded-lg border-2 px-6 py-3 text-lg font-bold text-bp-heading transition-colors duration-200 ease-in-out;
+    @apply inline-block whitespace-nowrap rounded-lg border-2 px-8 py-3 text-lg font-bold text-pp-heading transition-colors duration-200 ease-in-out hover:bg-opacity-80 transition-opacity duration-200 ease-in-out;
 
     &-sm {
       @apply px-3 py-1;
     }
   }
 
-  .bp-hidden {
+  .pp-hidden {
     @apply hidden;
   }
 }
 @tailwind utilities;
 
 .oke-reviewsTab[role='button'] {
-  @apply bp-hidden md:flex !important;
+  @apply pp-hidden md:flex !important;
 }

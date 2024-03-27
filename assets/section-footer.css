@@ -7,7 +7,7 @@
 }
 
 .footer__content-top {
-  padding-bottom: 5rem;
+  padding-bottom: 2rem;
   display: block;
 }
 
@@ -411,10 +411,10 @@ noscript .localization-selector.link {
   }
 }
 
-.footer-block__details-content .list-menu__item--link,
+/* .footer-block__details-content .list-menu__item--link,
 .copyright__content a {
   color: rgba(var(--color-foreground), 0.75);
-}
+} */
 
 .footer-block__details-content .list-menu__item--active {
   transition: text-decoration-thickness var(--duration-short) ease;
