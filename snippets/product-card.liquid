@@ -1,7 +1,5 @@
-<div class=" group relative overflow-hidden rounded-xl border-4 border-pp-grey-3 bg-white p-2 ">
-  <a href="{{ product.url  }}" class="absolute inset-0 z-20 h-full w-full"
-    >&nbsp;</a
-  >
+<div class=" group relative overflow-hidden rounded-xl border-4 border-pp-grey-3 bg-white p-2 transition-shadow duration-200 hover:shadow-lg">
+  <a href="{{ product.url  }}" class="absolute inset-0 z-20 h-full w-full">&nbsp;</a>
   <div class="relative rounded-lg bg-pp-grey-1 py-3">
     {% if product.featured_image %}
       <img
@@ -25,23 +23,25 @@
           </div>
         </div>
       {% endif %}
-      {% comment %} <span
-        class="btn btn-sm flex items-center border-bp-teal-dark bg-pp-green text-white hidden"
-        >View Options &nbsp;&nbsp;
-        <svg
-          width="17"
-          height="17"
-          viewBox="0 0 17 17"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M6.83008 4.7168L10.8301 8.7168L6.83008 12.7168" stroke="#ffffff" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
-        </svg>
-      </span> {% endcomment %}
+      {% comment %}
+        <span
+          class="btn btn-sm flex items-center border-bp-teal-dark bg-pp-green text-white hidden"
+          >View Options &nbsp;&nbsp;
+          <svg
+            width="17"
+            height="17"
+            viewBox="0 0 17 17"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M6.83008 4.7168L10.8301 8.7168L6.83008 12.7168" stroke="#ffffff" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      {% endcomment %}
     </div>
   </div>
   <div class="p-3">
-    <h3 class=" text-xl font-semibold  text-pp-heading text-center">
+    <h3 class=" text-center text-xl  font-semibold text-pp-heading">
       {{ product.title }}
     </h3>
 

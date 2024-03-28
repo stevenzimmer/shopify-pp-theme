@@ -1,0 +1,142 @@
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  onload="this.media='all'"
+>
+<style>
+  .swiper {
+    /* width: 600px; */
+    height: auto;
+  }
+
+  .swiper-slide {
+    height: auto;
+  }
+</style>
+<div class="px-6">
+  <div class="container rounded-lg border-4 border-pp-grey-3 bg-white px-6 pt-6 md:px-12 md:py-1">
+    <div class="flex w-full flex-wrap items-center">
+      <div class="relative mb-6 w-full md:mb-0 md:w-2/5 lg:w-1/3">
+        <div class="mb-6">
+          <p class="mb-3 text-4xl font-extrabold text-pp-indigo md:text-6xl">
+            <span id="aggData">4.7</span>/5
+          </p>
+          <p>Overall rating by verified buyers</p>
+        </div>
+        <div class="relative flex items-center space-x-3">
+          <div class="btn-prev ">
+            <svg
+              width="32"
+              height="33"
+              viewBox="0 0 32 33"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g opacity="0.5">
+              <rect x="31" y="31.5" width="30" height="30" rx="15" transform="rotate(-180 31 31.5)" stroke="#9E9E9E" stroke-width="2"/>
+              <path d="M18 20.5L14 16.5L18 12.5" stroke="#9E9E9E" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+              </g>
+            </svg>
+          </div>
+          <div class="btn-next ">
+            <svg
+              width="32"
+              height="33"
+              viewBox="0 0 32 33"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g opacity="0.5">
+              <rect x="1" y="1.5" width="30" height="30" rx="15" stroke="#9E9E9E" stroke-width="2"/>
+              <path d="M14 12.5L18 16.5L14 20.5" stroke="#9E9E9E" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="w-full md:w-3/5 lg:w-2/3">
+        <div class="swiper">
+          <div id="swiper-wrapper" class="swiper-wrapper md:items-center">&nbsp;</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+  async
+></script>
+<script>
+  async function fetchReviews() {
+    const reviewsEndpoint = 'https://api.okendo.io/v1/stores/0ec050c4-e242-48de-88b3-9f521a9929a4/';
+
+    const fetchReviews = await fetch(`${reviewsEndpoint}reviews`);
+    const data = await fetchReviews.json();
+
+    const fetchReviewsAggregate = await fetch(`${reviewsEndpoint}review_aggregate`);
+    const aggData = await fetchReviewsAggregate.json();
+
+    const reviewRatingValuesTotal = Number(aggData.reviewAggregate.reviewRatingValuesTotal);
+
+    const reviewCount = Number(aggData.reviewAggregate.reviewCount);
+
+    const avgRating = reviewRatingValuesTotal / reviewCount;
+
+    const aggDataEl = document.getElementById('aggData');
+
+    aggDataEl.innerText = avgRating.toFixed(1);
+
+    const swiperWrapper = document.getElementById('swiper-wrapper');
+
+    let slides = '';
+
+    data.reviews.forEach((review) => {
+      let stars = '';
+      for (let index = 0; index < review.rating; index++) {
+        stars += `
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.99989 11.8333L3.88522 13.9967L4.67122 9.41465L1.33789 6.16999L5.93789 5.50332L7.99522 1.33466L10.0526 5.50332L14.6526 6.16999L11.3192 9.41465L12.1052 13.9967L7.99989 11.8333Z" fill="#96B9FD"/>
+</svg>
+`;
+      }
+
+      slides += `
+      <div class="swiper-slide">
+        <p class="text-pp-heading font-bold text-2xl mb-3">"${review.title}"</p>
+        <div class="flex items-center mb-3"> 
+        ${stars}
+        </div>
+        <p class="text-pp-heading font-medium mb-3 text-xl ">${review.body}</p>
+        <p class="font-bold mb-1 text-pp-body">${review.reviewer.displayName}</p>
+        
+        <p class="text-sm text-pp-body">Purchased ${review.productName}</p>
+      </div>
+      `;
+    });
+
+    swiperWrapper.innerHTML = slides;
+
+    const swiper = new Swiper('.swiper', {
+      // Optional parameters
+      loop: true,
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.btn-next',
+        prevEl: '.btn-prev',
+      },
+    });
+  }
+
+  fetchReviews();
+</script>
+
+{% schema %}
+{
+  "name": "Custom Reviews Carousel",
+  "tag": "section",
+  "class": "py-20"
+}
+{% endschema %}

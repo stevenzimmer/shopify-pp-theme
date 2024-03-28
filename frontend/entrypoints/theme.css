@@ -1,17 +1,16 @@
 @tailwind base;
 @layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
 
-    *,
-      *::before,
-      *::after {
-        box-sizing: inherit;
-      }
+  html {
+    box-sizing: border-box;
+    height: 100%;
+  }
 
-      html {
-        box-sizing: border-box;
-        height: 100%;
-      }
-  
   body {
     @apply grid min-h-full bg-pp-grey-1 font-syne text-base font-normal text-pp-body antialiased;
     grid-template-rows: auto auto 1fr auto;
@@ -19,7 +18,7 @@
   }
 
   h1 {
-    @apply text-4xl font-semibold text-pp-heading md:text-5xl lg:text-7xl;
+    @apply text-4xl font-bold text-pp-heading md:text-5xl lg:text-7xl;
   }
 
   h2 {
@@ -61,7 +60,7 @@
 
   .product {
     h1 {
-      @apply text-4xl md:text-5xl font-semibold text-pp-heading;
+      @apply text-4xl font-semibold text-pp-heading md:text-5xl;
     }
 
     .product__media {
@@ -148,7 +147,7 @@
     .product-form {
       &__input {
         .quantity {
-          @apply rounded-lg border-2 border-solid border-pp-heading bg-pp-grey-1 text-base font-semibold before:bg-none before:shadow-none after:bg-transparent after:shadow-none overflow-hidden;
+          @apply overflow-hidden rounded-lg border-2 border-solid border-pp-heading bg-pp-grey-1 text-base font-semibold before:bg-none before:shadow-none after:bg-transparent after:shadow-none;
           &__button,
           &__input {
             @apply text-base;
@@ -157,11 +156,11 @@
 
         [type='radio'] {
           + label {
-            @apply bg-white rounded-lg text-pp-heading px-4 py-2 text-base border-2 border-solid border-pp-grey-3;
-            min-width: 100px;            
+            @apply rounded-lg border-2 border-solid border-pp-grey-3 bg-white px-4 py-2 text-base text-pp-heading;
+            min-width: 100px;
           }
           &:checked + label {
-            @apply bg-black text-white border-black;
+            @apply border-black bg-black text-white;
           }
         }
       }
@@ -172,7 +171,7 @@
           }
         }
       }
-      
+
       .button {
         &.product-form__submit {
           @apply rounded-xl border-2 border-solid border-pp-heading bg-white text-base font-semibold before:shadow-none after:shadow-none;
@@ -200,7 +199,7 @@
 @tailwind components;
 @layer components {
   .btn {
-    @apply inline-block whitespace-nowrap rounded-lg border-2 px-8 py-3 text-lg font-bold text-pp-heading transition-colors duration-200 ease-in-out hover:bg-opacity-80 transition-opacity duration-200 ease-in-out;
+    @apply inline-block whitespace-nowrap rounded-lg border-2 px-8 py-3 text-lg font-bold text-pp-heading transition-colors transition-opacity duration-200 duration-200 ease-in-out ease-in-out hover:bg-opacity-80;
 
     &-sm {
       @apply px-3 py-1;

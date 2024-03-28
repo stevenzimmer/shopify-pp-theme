@@ -53,7 +53,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "What are Plus Patches?",
-            "icon": "check_mark",
+            "icon": "none",
             "row_content": "<p>Plus Patches are overlay adhesive tape to help secure your diabetes sensors and pumps for 10-14 days.</p>",
             "page": ""
           }
@@ -62,7 +62,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "What diabetes management sensors and pumps is Plus Patch designed for?",
-            "icon": "check_mark",
+            "icon": "none",
             "row_content": "<p><strong>CGMs:<br/></strong>-Dexcom G6</p><p>-Dexcom G7</p><p>-Abbott Freestyle Libre</p><p>-Medtronic Guardian</p><p><strong>Infusion Pumps</strong></p><p>-Insulet Omnipod</p>",
             "page": ""
           }
@@ -71,7 +71,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "What is the wear time for Plus Patches?",
-            "icon": "check_mark",
+            "icon": "none",
             "row_content": "<p>The intended wear time is 10-14 days of continuous wear with our overlay patches.</p>",
             "page": ""
           }
@@ -80,7 +80,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "How many Plus Patches come in a pack?",
-            "icon": "check_mark",
+            "icon": "none",
             "row_content": "<p>Plus patches come in 10 packs.</p>",
             "page": ""
           }
@@ -89,7 +89,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Are Plus Patches reusable?",
-            "icon": "check_mark",
+            "icon": "none",
             "row_content": "<p>No. Plus patches are single use.</p>",
             "page": ""
           }
@@ -98,7 +98,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Will getting the adhesive on my actual sensor hurt it?",
-            "icon": "check_mark",
+            "icon": "none",
             "row_content": "<p>Our Plus Patch overlays are designed to either fit over the original manufacturer's skin patch to avoid the device all together or if you are using the G7, Libre or Guardian we have applied a non-woven carrier in the center of our Plus Patches so no adhesive will come in contact with your device. </p>",
             "page": ""
           }
@@ -107,7 +107,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "How long does it take for Plus Patches to ship out?",
-            "icon": "check_mark",
+            "icon": "none",
             "row_content": "<p>We ship all our packages out 3-5 days after an order is received.</p>",
             "page": ""
           }
@@ -116,7 +116,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Does health care insurance pay for Plus Patches?",
-            "icon": "check_mark",
+            "icon": "none",
             "row_content": "<p>We do not accept insurance on our website. However, you can check with you provider to see if they cover supplies. The HCPCS codes for reimbursement are HCPCS Code: K0553</p><p><br/>Product and Service Code: DM05 Blood Glucose Monitors and/or Supplies (Non-Mail Order)</p><p><br/>Product and Service Code: DM06 Blood Glucose Monitors and/or Supplies (Mail Order)</p>",
             "page": ""
           }
@@ -154,7 +154,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Do you offer free shipping?",
-            "icon": "check_mark",
+            "icon": "none",
             "row_content": "<p>Yes, we offer free shippign on all orders over $25</p>",
             "page": ""
           }
@@ -163,7 +163,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Do you offer expedited shipping?",
-            "icon": "check_mark",
+            "icon": "none",
             "row_content": "<p>Yes, we have both UPS and USPS options available at checkout.</p>",
             "page": ""
           }
@@ -172,7 +172,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "How long will it take to get my order?",
-            "icon": "check_mark",
+            "icon": "none",
             "row_content": "<p>Orders are shipped within 1-3 business days. Please add this time to your shipment method to get the total time to recieve your order.</p>",
             "page": ""
           }
@@ -181,7 +181,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "What if I dont like the patches?",
-            "icon": "check_mark",
+            "icon": "none",
             "row_content": "<p>We have a 30-day return policy, which means you have 30 days after receiving your item to request a return.</p>",
             "page": ""
           }

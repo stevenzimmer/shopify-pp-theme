@@ -6,7 +6,8 @@
         "h1": "Secure Your Sensor, for Good",
         "background_image": "shopify://shop_images/pp-hero.png",
         "subtext": "Waterproof overlay covers for sensitive skin that stay in place for 10-14 days.",
-        "button_text": "View All Patches"
+        "button_text": "View All Patches",
+        "button_link": "shopify://collections/frontpage"
       }
     },
 
@@ -14,6 +15,7 @@
       "type": "featured-collection",
       "settings": {
         "thumbnail": true,
+        "button_link": "shopify://collections/frontpage",
         "title": "Shop Premium Quality Patches",
         "heading_size": "h2",
         "description": "<p>For Dexcom, Freestyle Libre, Medatronic Guardian, and Omnipod Monitors</p>",
@@ -315,22 +317,25 @@
         "padding_bottom": 36
       }
     },
-    "16770418119e5f6c29": {
-      "type": "apps",
-      "blocks": {
-        "5417a61c-ebcd-46f0-9347-435dfebfdaa4": {
-          "type": "shopify://apps/okendo/blocks/reviews-carousel/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
-          "settings": {
-            "show_heading": true,
-            "heading": "Customer Reviews",
-            "badge_link": "",
-            "product": ""
-          }
-        }
-      },
-      "block_order": ["5417a61c-ebcd-46f0-9347-435dfebfdaa4"],
-      "settings": { "include_margins": true }
+    "custom-reviews-carousel": {
+      "type": "custom-reviews-carousel"
     },
+    // "16770418119e5f6c29": {
+    //   "type": "apps",
+    //   "blocks": {
+    //     "5417a61c-ebcd-46f0-9347-435dfebfdaa4": {
+    //       "type": "shopify://apps/okendo/blocks/reviews-carousel/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+    //       "settings": {
+    //         "show_heading": true,
+    //         "heading": "Customer Reviews",
+    //         "badge_link": "",
+    //         "product": ""
+    //       }
+    //     }
+    //   },
+    //   "block_order": ["5417a61c-ebcd-46f0-9347-435dfebfdaa4"],
+    //   "settings": { "include_margins": true }
+    // },
     // "featured-blog": {
     //   "type": "featured-blog",
     //   "settings": {
@@ -446,7 +451,7 @@
     "a88a4ad4-14d3-4475-bd1f-1fcbd24d5f2e",
     "0180dacd-e5b4-478f-8f2e-0dd5535768ac",
     "4a15607b-7aa0-45b5-abc3-5208663173bb",
-    "16770418119e5f6c29",
+    "custom-reviews-carousel",
     "5259c48c-dce1-434f-bb56-4e5b481be9b6",
     "newsletter"
   ]

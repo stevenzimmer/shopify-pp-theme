@@ -87,6 +87,7 @@
       "type": "featured-collection",
       "settings": {
         "thumbnail": true,
+        "button_link": "shopify://collections/frontpage",
         "title": "Shop Premium Quality Patches",
         "heading_size": "h1",
         "description": "<p>For Dexcom, Freestyle Libre, Medatronic Guardian, and Omnipod Monitors</p>",
