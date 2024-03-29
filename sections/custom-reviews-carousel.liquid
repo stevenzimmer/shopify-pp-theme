@@ -4,11 +4,7 @@
   onload="this.media='all'"
 >
 <style>
-  .swiper {
-    /* width: 600px; */
-    height: auto;
-  }
-
+  .swiper,
   .swiper-slide {
     height: auto;
   }
@@ -119,10 +115,7 @@
     swiperWrapper.innerHTML = slides;
 
     const swiper = new Swiper('.swiper', {
-      // Optional parameters
       loop: true,
-
-      // Navigation arrows
       navigation: {
         nextEl: '.btn-next',
         prevEl: '.btn-prev',
