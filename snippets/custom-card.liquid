@@ -1,106 +1,59 @@
 {% case product.id %}
   {% when 8000553124139 %}
-
-    {% assign featured_image = "dexcom-g6.png" %}
-    {% assign title = "Dexcom G6" %}
+    {% assign featured_image = 'dexcom-g6.png' %}
+    {% assign title = 'Dexcom G6' %}
     {% comment %} Dexcom G6 Adhesive Patches - 10 Pack {% endcomment %}
 
-    {% when 8000645726507 %}
-      {% assign featured_image = "dexcom-g7.png" %}
-      {% assign title = "Dexcom G7" %}
+  {% when 8000645726507 %}
+    {% assign featured_image = 'dexcom-g7.png' %}
+    {% assign title = 'Dexcom G7' %}
     {% comment %} Dexcom G7 Adhesive Patches - 10 Pack {% endcomment %}
-    {% when 8000657522987 %}
-      {% assign featured_image = "freestyle-libre.png" %}
-      {% assign title = "FreeStyle Libre " %}
+  {% when 8000657522987 %}
+    {% assign featured_image = 'freestyle-libre.png' %}
+    {% assign title = 'FreeStyle Libre ' %}
     {% comment %} FreeStyle Libre Sensor Covers - 10 pack  {% endcomment %}
-    {% when 8000667484459 %}
-      {% assign featured_image = "medtronic.png" %}
-      {% assign title = "Medtronic Guardian" %}
+  {% when 8000667484459 %}
+    {% assign featured_image = 'medtronic.png' %}
+    {% assign title = 'Medtronic Guardian' %}
     {% comment %} Medtronic Guardian Sensor Tape Covers - 10 Pack {% endcomment %}
-    {% when 8000695927083 %}
-      {% assign featured_image = "omnipod.png" %}
-      {% assign title = "Omnipod" %}
+  {% when 8000695927083 %}
+    {% assign featured_image = 'omnipod.png' %}
+    {% assign title = 'Omnipod' %}
     {% comment %} Omnipod Pump Adhesive Patches - 10 pack {% endcomment %}
- 
-    
+
   {% else %}
-  {% assign featured_image = product.featured_image  %}
-  {% assign title = product.title %}
+    {% assign featured_image = product.featured_image %}
+    {% assign title = product.title %}
     {% assign old_thumb = true %}
 {% endcase %}
 
-<div class=" group relative overflow-hidden rounded-xl  hover:bg-white p-2 h-full hover:shadow-lg transition-shadow duration-200">
+<div class=" group relative h-full overflow-hidden  rounded-xl p-2 transition-shadow duration-200 hover:bg-white hover:shadow-lg">
   <a href="{{ product.url }}" class="absolute inset-0 z-20 h-full w-full">&nbsp;</a>
-  <div class="relative rounded-lg py-3 px-2 w-full lg:h-[200px] flex items-center justify-center ">
+  <div class="relative flex w-full items-center justify-center rounded-lg px-2 py-3 lg:h-[200px] ">
     {% if featured_image %}
       {% if old_thumb %}
         <img
-       class="w-full h-full object-cover"
-        width="{{ product.featured_image.width }}"
-        height="{{ product.featured_image.height }}"
-        src="{{ product.featured_image.src | img_url: 'large' }}"
-        alt="{{ product.featured_image.alt | escape }}"
-      >
-        {% else %}
-        
-       <img
-        width="{{ product.featured_image.width }}"
-        height="{{ product.featured_image.height }}"
-        src="{{ featured_image | file_img_url: "large" }}"
-        alt="{{ product.featured_image.alt | escape }}"
-      >
-    {% endif %}
+          class="h-full w-full object-cover"
+          width="{{ product.featured_image.width }}"
+          height="{{ product.featured_image.height }}"
+          src="{{ product.featured_image.src | img_url: 'large' }}"
+          alt="{{ product.featured_image.alt | escape }}"
+        >
+      {% else %}
+        <img
+          width="{{ product.featured_image.width }}"
+          height="{{ product.featured_image.height }}"
+          src="{{ featured_image | file_img_url: "large" }}"
+          alt="{{ product.featured_image.alt | escape }}"
+        >
+      {% endif %}
     {% else %}
       {{ 'product-1' | placeholder_svg_tag: 'w-full h-full object-cover' }}
     {% endif %}
-
-    {% comment %} <div
-      class="absolute inset-0 flex h-full w-full items-center justify-center "
-    >
-      {% if product.price < product.compare_at_price %}
-        <div class="absolute left-3 top-3">
-          <div class="h-full w-full bg-pp-green px-2 py-1 text-sm font-semibold text-white">
-            Sale
-          </div>
-        </div>
-      {% endif %} {% endcomment %}
-      {% comment %} <span
-        class="btn btn-sm flex items-center border-bp-teal-dark bg-pp-green text-white hidden"
-        >View Options &nbsp;&nbsp;
-        <svg
-          width="17"
-          height="17"
-          viewBox="0 0 17 17"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M6.83008 4.7168L10.8301 8.7168L6.83008 12.7168" stroke="#ffffff" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
-        </svg>
-      </span> {% endcomment %}
-    {% comment %} </div> {% endcomment %} 
   </div>
   <div class="p-3">
-    <h3 class=" text-xl font-semibold  text-pp-heading text-center">
+    <h3 class=" text-center text-xl  font-semibold text-pp-heading">
       {{ title }}
     </h3>
-
-    {% comment %} <p>{{ product.description | strip_html }}</p> {% endcomment %}
-    {% comment %}
-      <a href="{{ product.url }}" class="md:bp-hidden group flex items-center py-3">
-        <p class=" m-0 font-semibold text-bp-heading">View options</p>
-        <div class="px-1">
-          <svg
-            class="transition-transform duration-200 group-hover:translate-x-0.5"
-            width="16"
-            height="17"
-            viewBox="0 0 16 17"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M6 4.5L10 8.5L6 12.5" stroke="#F07961" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
-          </svg>
-        </div>
-      </a>
-    {% endcomment %}
   </div>
 </div>

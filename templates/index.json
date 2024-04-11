@@ -4,7 +4,7 @@
       "type": "page-hero",
       "settings": {
         "h1": "Secure Your Sensor, for Good",
-        "background_image": "shopify://shop_images/pp-hero.png",
+        "background_image": "shopify://shop_images/hero-plus.png",
         "subtext": "Waterproof overlay covers for sensitive skin that stay in place for 10-14 days.",
         "button_text": "View All Patches",
         "button_link": "shopify://collections/frontpage"
@@ -314,7 +314,7 @@
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 80
       }
     },
     "custom-reviews-carousel": {

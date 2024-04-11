@@ -15,55 +15,76 @@
 {%- endstyle -%}
 
 <div class="image-with-text image-with-text--{{ section.settings.content_layout }} page-width isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless section.settings.color_scheme == 'background-1' and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %} section-{{ section.id }}-padding">
-  <div class="image-with-text__grid grid grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %}">
-    <div class="image-with-text__media-item image-with-text__media-item--{{ section.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }} grid__item">
-      <div 
-        {% if section.settings.height == 'adapt' and section.settings.image != blank %} style="padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;"{% endif %}
+  <div class="image-with-text__grid grid--gapless grid--1-col grid grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %}">
+    <div class="image-with-text__media-item image-with-text__media-item--{{ section.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }} grid__item mb-6 md:mb-0">
+      <div
+        {% if section.settings.height == 'adapt' and section.settings.image != blank %}
+          style="padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;"
+        {% endif %}
       >
         {%- if section.settings.image != blank -%}
           {%- capture sizes -%}(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2){%- endcapture -%}
-          {{ section.settings.image | image_url: width: 1500 | image_tag:
-            loading: 'lazy',
-            sizes: sizes,
-            widths: '165, 360, 535, 750, 1070, 1500'
+          {{
+            section.settings.image
+            | image_url: width: 1500
+            | image_tag: loading: 'lazy', sizes: sizes, widths: '165, 360, 535, 750, 1070, 1500'
           }}
         {%- else -%}
           {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
         {%- endif -%}
       </div>
     </div>
-    <div class="image-with-text__text-item grid__item flex items-center lg:px-6 md:px-12 px-6 xl:px-12">
+    <div class="image-with-text__text-item grid__item flex items-center px-6  xl:px-12">
       <div id="ImageWithText--{{ section.id }}" class="">
         {%- for block in section.blocks -%}
           {% case block.type %}
             {%- when 'heading' -%}
-              <h2 class="image-with-text__heading text-3xl md:text-5xl font-bold mb-6" {{ block.shopify_attributes }}>
+              <h2
+                class="image-with-text__heading mb-6 text-3xl font-bold md:text-5xl"
+                {{ block.shopify_attributes }}
+              >
                 {{ block.settings.heading | escape }}
               </h2>
             {%- when 'caption' -%}
-              <p class="image-with-text__text image-with-text__text--caption {{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }} {{ block.settings.text_style }}" {{ block.shopify_attributes }}>{{ block.settings.caption | escape }}</p>
+              <p
+                class="image-with-text__text image-with-text__text--caption {{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }} {{ block.settings.text_style }}"
+                {{ block.shopify_attributes }}
+              >
+                {{ block.settings.caption | escape }}
+              </p>
             {%- when 'text' -%}
-              <div class="image-with-text__text rte {{ block.settings.text_style }} prose mb-6" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
+              <div
+                class="image-with-text__text rte {{ block.settings.text_style }} prose mb-6"
+                {{ block.shopify_attributes }}
+              >
+                {{ block.settings.text }}
+              </div>
             {%- when 'button' -%}
               {%- if block.settings.button_label != blank -%}
-
-        <a {% if block.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link }}"{% endif %}  class="group flex items-center">
-          <p class=" m-0 font-semibold text-pp-heading"> {{ block.settings.button_label | escape }}</p>
-          <div class="px-1">
-            <svg
-              class="transition-transform duration-200 group-hover:translate-x-0.5"
-              width="16"
-              height="17"
-              viewBox="0 0 16 17"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M6 4.5L10 8.5L6 12.5" stroke="#01BF93" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
-            </svg>
-          </div>
-        </a>
- 
-             
+                <a
+                  {% if block.settings.button_link == blank %}
+                    role="link" aria-disabled="true"
+                  {% else %}
+                    href="{{ block.settings.button_link }}"
+                  {% endif %}
+                  class="group flex items-center"
+                >
+                  <p class=" m-0 font-semibold text-pp-heading">
+                    {{ block.settings.button_label | escape }}
+                  </p>
+                  <div class="px-1">
+                    <svg
+                      class="transition-transform duration-200 group-hover:translate-x-0.5"
+                      width="16"
+                      height="17"
+                      viewBox="0 0 16 17"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M6 4.5L10 8.5L6 12.5" stroke="#01BF93" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                </a>
               {%- endif -%}
           {%- endcase -%}
         {%- endfor -%}

@@ -1,1 +1,33 @@
-{"sections":{"main":{"type":"main-page","settings":{"padding_top":36,"padding_bottom":28}},"1677388715ac5c6d6f":{"type":"apps","blocks":{"2c131c2f-1782-4869-bcb1-0bc3df221608":{"type":"shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/reviews-badge\/bb689e69-ea70-4661-8fb7-ad24a2e23c29","settings":{"horizontal_alignment":"center"}},"33149a87-e329-4b8f-83d0-048677296eb2":{"type":"shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/reviews-widget\/bb689e69-ea70-4661-8fb7-ad24a2e23c29","settings":{"product":"","widget_type":"combined_widget"}}},"block_order":["2c131c2f-1782-4869-bcb1-0bc3df221608","33149a87-e329-4b8f-83d0-048677296eb2"],"settings":{"include_margins":true}},"f9fcd95b-9e06-405b-81ee-c31d7f9a4e6e":{"type":"custom-liquid","settings":{"custom_liquid":"<div data-oke-reviews-widget=\"\"><\/div>","color_scheme":"background-1","padding_top":40,"padding_bottom":52}}},"order":["main","1677388715ac5c6d6f","f9fcd95b-9e06-405b-81ee-c31d7f9a4e6e"]}
+{
+  "sections": {
+    "main": { "type": "main-page", "settings": { "padding_top": 80, "padding_bottom": 80 } },
+    "1677388715ac5c6d6f": {
+      "type": "apps",
+      "blocks": {
+        "2c131c2f-1782-4869-bcb1-0bc3df221608": {
+          "type": "shopify://apps/okendo-product-reviews-ugc/blocks/reviews-badge/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": { "horizontal_alignment": "center" }
+        },
+        "33149a87-e329-4b8f-83d0-048677296eb2": {
+          "type": "shopify://apps/okendo-product-reviews-ugc/blocks/reviews-widget/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": { "product": "", "widget_type": "combined_widget" }
+        }
+      },
+      "block_order": [
+        "2c131c2f-1782-4869-bcb1-0bc3df221608",
+        "33149a87-e329-4b8f-83d0-048677296eb2"
+      ],
+      "settings": { "include_margins": true }
+    },
+    "f9fcd95b-9e06-405b-81ee-c31d7f9a4e6e": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div data-oke-reviews-widget=\"\"></div>",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": ["main", "1677388715ac5c6d6f", "f9fcd95b-9e06-405b-81ee-c31d7f9a4e6e"]
+}

@@ -8,7 +8,6 @@
         src="{{ product.featured_image.src | img_url: 'large' }}"
         alt="{{ product.featured_image.alt | escape }}"
       >
-
     {% else %}
       {{ 'product-1' | placeholder_svg_tag: 'w-full h-full object-cover' }}
     {% endif %}
@@ -23,45 +22,11 @@
           </div>
         </div>
       {% endif %}
-      {% comment %}
-        <span
-          class="btn btn-sm flex items-center border-bp-teal-dark bg-pp-green text-white hidden"
-          >View Options &nbsp;&nbsp;
-          <svg
-            width="17"
-            height="17"
-            viewBox="0 0 17 17"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M6.83008 4.7168L10.8301 8.7168L6.83008 12.7168" stroke="#ffffff" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
-          </svg>
-        </span>
-      {% endcomment %}
     </div>
   </div>
   <div class="p-3">
     <h3 class=" text-center text-xl  font-semibold text-pp-heading">
       {{ product.title }}
     </h3>
-
-    {% comment %} <p>{{ product.description | strip_html }}</p> {% endcomment %}
-    {% comment %}
-      <a href="{{ product.url }}" class="md:bp-hidden group flex items-center py-3">
-        <p class=" m-0 font-semibold text-bp-heading">View options</p>
-        <div class="px-1">
-          <svg
-            class="transition-transform duration-200 group-hover:translate-x-0.5"
-            width="16"
-            height="17"
-            viewBox="0 0 16 17"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M6 4.5L10 8.5L6 12.5" stroke="#F07961" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
-          </svg>
-        </div>
-      </a>
-    {% endcomment %}
   </div>
 </div>

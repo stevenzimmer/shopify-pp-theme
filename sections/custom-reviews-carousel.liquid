@@ -3,12 +3,13 @@
   href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
   onload="this.media='all'"
 >
-<style>
+
+{% stylesheet %}
   .swiper,
   .swiper-slide {
     height: auto;
   }
-</style>
+{% endstylesheet %}
 <div class="px-6">
   <div class="container rounded-lg border-4 border-pp-grey-3 bg-white px-6 pt-6 md:px-12 md:py-1">
     <div class="flex w-full flex-wrap items-center">
@@ -17,7 +18,7 @@
           <p class="mb-3 text-4xl font-extrabold text-pp-indigo md:text-6xl">
             <span id="aggData">4.7</span>/5
           </p>
-          <p>Overall rating by verified buyers</p>
+          <p>{{ section.settings.rating_text }}</p>
         </div>
         <div class="relative flex items-center space-x-3">
           <div class="btn-prev ">
@@ -64,11 +65,17 @@
   src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
   async
 ></script>
+
 <script>
+  const limit_number = '{{ section.settings.limit }}';
+</script>
+{% javascript %}
   async function fetchReviews() {
     const reviewsEndpoint = 'https://api.okendo.io/v1/stores/0ec050c4-e242-48de-88b3-9f521a9929a4/';
 
-    const fetchReviews = await fetch(`${reviewsEndpoint}reviews`);
+    const limit = `?limit=${limit_number}`;
+
+    const fetchReviews = await fetch(`${reviewsEndpoint}reviews${limit}`);
     const data = await fetchReviews.json();
 
     const fetchReviewsAggregate = await fetch(`${reviewsEndpoint}review_aggregate`);
@@ -124,12 +131,26 @@
   }
 
   fetchReviews();
-</script>
+{% endjavascript %}
 
 {% schema %}
 {
   "name": "Custom Reviews Carousel",
   "tag": "section",
-  "class": "py-20"
+  "class": "py-20",
+  "settings": [
+    {
+      "type": "text",
+      "id": "rating_text",
+      "default": "Overall rating by verified buyers",
+      "label": "Rating Text"
+    },
+    {
+      "type": "number",
+      "id": "limit",
+      "default": 25,
+      "label": "Number of reviews to show"
+    }
+  ]
 }
 {% endschema %}
